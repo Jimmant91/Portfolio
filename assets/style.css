@@ -65,6 +65,11 @@ nav ul li a {
     border-radius: 35%;
 }
 
+p {
+    margin-right: 5%;
+    font-size: 18px;
+}
+
 main {
     margin-left: 10%;
 }
@@ -85,6 +90,7 @@ h3 {
     word-wrap: break-word;
 }
 
+
 /*block container (contains everything exclusive to the Work blocks, including it's own classes*/
 
 .block-container {
@@ -100,6 +106,68 @@ h3 {
     position: relative;  
 }
 
+/* this section is where I set background images for work blocks */
+#surf-report {
+    /* width 95% so there is some space on either side */
+    flex-basis: 95%; /* makes this block always the largest */
+    background-image: url(images/surfer.jpg);  
+    background-position: 25%;
+}
+
+#led-wall {
+    background-image: url(images/ledWall.jpg);
+    background-position: center;
+}
+
+#calculator {
+    background-image: url(images/calc.jpg);
+    background-position: center;
+}
+
+#pastel-puzzle {
+    background-image: url(images/pastelPuzzle.jpg);
+    background-position: center;
+}
+
+#run-buddy {
+    background-image: url(images/runBud.jpg);
+    background-position: center;
+}
+
+
+/* format work block titles */
+.work-block-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #fff;
+    align-self: flex-end;
+    padding: 20px 10px;
+}
+
+/* add hyperlink to work blocks */
+.block-link {
+    position: absolute; /* positioning hyperlink relative to work blocks */
+    width: 100%; /* width same as container */
+    height: 100%; /* height same as container */
+    top: 0; /* position at top of container */
+    left: 0; /* position at left of container */
+}
+
+.block-link:hover {
+    background-color: #414040; /* background color when hover */
+    opacity: 0.25; /* make sure you can see through it */
+}
+
+/* this hides the link text visually while allowing link text */
+/* useful for screen reader accessibility */
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
 /*universal classes and ids*/
 
 .flex-wrap {
@@ -113,17 +181,6 @@ h3 {
     justify-content: flex-end;
 }
 
-.border-left::after {
-    content:"";
-    position:absolute;
-    left:-40px;
-    right:-20px;
-    top:-5px;
-    bottom:-5px;
-    border-left:2px solid;
-    border-left-width:4px;
-  }
-
 .spread-links {
     display: flex;
     flex-basis: 100%; 
@@ -131,9 +188,59 @@ h3 {
     align-items: center;
 } 
 
-#about-me {
-    position: relative;
-    margin-top: 75px;
-    margin-left: 60px;
-    text-align: left;
+/* For below, I originally used the :after element to create a border beside the content instead, but this shifted my page too much. I thought it was a cool effect */
+.title {
+    flex-basis: 15%; /* take up 15% of screen */
+    padding-right: 5px; /* pad side for space between border */
+    border-right: 2px solid black; /* add line to divide title and content */
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: right; /* push text to the right of container */
+}
+
+
+
+/*media rules*/
+
+@media screen and (max-width: 768px) {
+   
+    /* add some space around links and make them take up the whole screen */
+    header nav {
+        padding-bottom: 10px;
+        flex-basis: 100%;
+    }
+
+    /* change surf block width to match the rest */
+    /* adjust background image position to show the dude */
+    #surf-report-block {
+        flex-basis: auto;
+        background-position: 35%;
+    }
+
+    /* make work blocks fill entire container */
+    .work-block {
+        flex-basis: 100%;
+    }
+    
+    /* make paragraph font smaller for smaller screens */
+    p {
+        font-size: 16px;
+    }
+
+    /* change nav lists to inline-flex and format for space between and around links */
+    nav ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 5px;
+    }
+
+    /* make individual links overflow to next line at 2nd link */
+    /* flex-basis 40% because taking margin into account */
+    nav ul li {
+        margin: 5px;
+        flex-basis: 40%;
+        flex-wrap: wrap;
+    }
+
 }
