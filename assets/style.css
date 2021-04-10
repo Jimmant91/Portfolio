@@ -1,48 +1,50 @@
 * {
-    background-color: rgb(61, 131, 131);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     color: #030005;
     font-family: roboto;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    display:flex;
+    flex-wrap: wrap;
+    background-color: #3d8383;
 }
 
 header {
     justify-content: space-between;
     background-color:#524e4e;
-    width: 100vw;
-    margin: auto;
+    width: 100%;
 }
 
-header h1 {
+h1 {
+    position: relative;
     background-color:#159ed4;
     margin-left: 5px;
     border-style: dotted;
     border-radius: 10%;
 }
 
-nav{
+nav {
     margin-right: 5%;
     background-color: #524e4e;
 }
 
 nav ul {
-    background-color: #524e4e;
+   background-color: #524e4e;
 }
 
 nav ul li {
     display: inline-flex;
     background-color: #524e4e;
-    justify-content: space-between;
 }
 
 nav ul li a {
     color: rgb(21, 158, 212);
     background-color: #524e4e;
-    text-decoration: underline 5px;
-    text-underline-offset: 5px;
+    border-bottom: 3px solid #159ed4;
+    text-decoration: none;
 }
 
 #subheader {
@@ -67,16 +69,48 @@ main {
     margin-left: 10%;
 }
 
+.block-container {
+    justify-content: space-around;
+    flex-basis: 85%;
+}
 
 aside {
     position: relative;
 }
 
-aside h3 {
+h3 {
     position: relative;
     text-align: right;
     font-size: 50px; 
     word-wrap: break-word;
+}
+
+/*block container (contains everything exclusive to the Work blocks, including it's own classes*/
+
+.block-container {
+    justify-content: space-around;
+    flex-basis: 85%;
+}
+
+.work-block {
+    height: 250px;
+    flex-basis: 45%;
+    border: 2px solid #fff;
+    margin: 10px 0;  
+    position: relative;  
+}
+
+/*universal classes and ids*/
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .border-left::after {
@@ -90,69 +124,12 @@ aside h3 {
     border-left-width:4px;
   }
 
-
-/*grid container*/
-
-.grid-container {
-    display: grid;
-    justify-content:left;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 300px 300px 300px 300px;
-    gap: 26px 22px;
-    grid-template-areas:
-      "surf-report surf-report"
-      "surf-report surf-report"
-      "led-wall calculator"
-      "pastel run-buddy";
-  }
-  .surf-report { grid-area: surf-report; }
-  .led-wall { grid-area: led-wall; }
-  .calculator{ grid-area: calculator; }
-  .pastel { grid-area: pastel; }
-  .run-buddy { grid-area: run-buddy; }
-
-  .grid-container > .surf-report {
-    width: 100%;
-    background: url(images/surfer.jpg);
-    background-size: cover;
-  }
-
-  .grid-container > .led-wall {
-    width: 100%;
-    background: url(images/ledWall.jpg);
-    background-size: cover;
-    }
-
-.grid-container > .calculator {
-    width: 100%;
-    background: url(images/calc.jpg);
-    background-size: cover;
-    }
-
-.grid-container > .pastel {
-    width: 100%;
-    background: url(images/pastelPuzzle.jpg);
-    background-size: cover;
-    }
-
-.grid-container > .run-buddy {
-    width: 100%;
-    background: url(images/runBud.jpg);
-    background-size: cover;
-    }
-
-
-/*classes and ids*/
-
-.flex-wrap {
+.spread-links {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-end {
-    display: flex;
-    justify-content: flex-end;
-}
+    flex-basis: 100%; 
+    justify-content: space-around;
+    align-items: center;
+} 
 
 #about-me {
     position: relative;
@@ -160,12 +137,3 @@ aside h3 {
     margin-left: 60px;
     text-align: left;
 }
-
-
-/* Media Rules*/
-
-@media (max-width: 400px) {
-    .flex-grid {
-      display: block;
-    }
-  }

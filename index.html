@@ -4,14 +4,15 @@
 <head>
   <title>James Antley</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
+
     <header class="flex-wrap">
         <h1>James Antley</h1>
-        <nav class="flex-end">
+        <nav class="flex-end spread-links">
             <ul>
                 <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#work">Work</a></li>
@@ -21,11 +22,12 @@
         </nav>    
     </header>
     
+    <!--this is my subheader with a banner and subtitle-->
     <header class="flex-wrap" id="subheader">
         <h2>Hey, Glad You're Here! 🐉</h2>
     </header>
 
-    <main>
+    <main class="flex-wrap">
 
         <section class="flex-end">
             <aside>
@@ -35,38 +37,58 @@
                 Expedita aut animi est, ut velit consequatur autem blanditiis, earum magni hic maiores unde quae? Expedita porro corrupti nam quaerat? Tenetur, quibusdam?</p>
         </section>
 
-        <section class="flex-wrap">
+        <section class="flex-wrap main-container">
             <aside>
                 <h3>Work</h3>
             </aside>
-            <grid class="grid-container border-left">
-                <div class="surf-report">
-                    <h2>Surf Report</h2>
-                    <p>Coming Soon</p>
+            <!--will align aside next to work blocks-->
+                <div id="surf-report" class="flex-wrap work-block">
+                    <a class="block-link hide-text" target="_blank" href=#>Surf Report</a>
+                    <div class="work-block-title" class="top-block-title">
+                        <h4>Surf Report</h4>
+                        <h5>Coming Soon</h5>
+                    </div>
                 </div>
-                <div class="led-wall">
-                    <h2>LED Wall</h2>
-                    <p>Coming Soon</p>
+                <div id="led-wall" class="flex-wrap work-block">
+                    <a class="block-link hide-text" target="_blank" href=#>LED Wall</a>
+                    <div class="work-block-title">
+                        <h4>LED Wall</h4>
+                        <h5>Coming Soon</h5>
+                    </div>
                 </div>
-                <div class="calculator">
-                    <h2>Calculator</h2>
-                    <p>Coming Soon</p>
+                <div id="calculator" class="flex-wrap work-block">
+                    <a class="block-link hide-text" target="_blank" href=#>Calculator</a>
+                    <div class="work-block-title">
+                        <h4>Calculator</h4>
+                        <h5>Coming Soon</h5>
+                    </div>    
                 </div>
-                <div class="pastel">
-                    <h2>Pastel Puzzle</h2>
-                    <p>Coming Soon</p>
+                <div id="pastel-puzzle" class="flex-wrap work-block">
+                    <a class="block-link hide-text" target="_blank" href=#>Pastel Puzzle</a>
+                    <div class="work-block-title">
+                        <h4>Pastel Puzzle</h4>
+                        <h5>Coming Soon</h5>
+                    </div>
                 </div>
-                <div class="run-buddy">
-                    <h2>Run Buddy</h2>
-                    <p>Coming Soon</p>
+                <div id="run-buddy" class="flex-wrap work-block">
+                    <a class="block-link hide-text" target="_blank" href=#>Run Buddy</a>
+                    <div class="work-block-title">
+                        <h4>Run Buddy</h4>
+                        <h5>Coming Soon</h5>
+                    </div>
                 </div>
-            </grid>
-        </section>
+         </section>
 
-        <section class="flex-wrap">
+        <section class="flex-end">
             <aside>
                 <h3>Contact Me</h3>
             </aside>
+            <nav class="flex-end">
+                <a href="#">919.935.8724</a>
+                <a href="#">jimmy.antley@gmail.com</a>
+                <a href="#">Github</a>
+                <a href="#">Spotify</a>
+            </nav>
         </section>
         
     </main>
@@ -74,4 +96,5 @@
     <footer>
 f
     </footer>
+
 </body>
