@@ -195,6 +195,7 @@ h3 {
     height: 200px;
     width: 100%;
     margin-bottom: 10px;
+    border: solid black 4px;
     background: repeating-linear-gradient(45deg, orange, #524e4e 100px);
     animation-timing-function: ease-in ease-out; /*I don't know why the animation stopped working - will change, don't like the colors*/
 }
