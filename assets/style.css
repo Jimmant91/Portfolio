@@ -223,12 +223,17 @@ h3 {
 
 /*media rules*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 60%) {
    
     /* add some space around links and make them take up the whole screen */
     header nav {
         padding-bottom: 10px;
         flex-basis: 100%;
+    }
+
+    #profile-pic {
+        background-image: none;
+        border: none;
     }
 
     /* change surf block width to match the rest */
