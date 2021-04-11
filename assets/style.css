@@ -26,7 +26,8 @@ h1 {
     border-radius: 10%;
 }
 
-nav {
+header nav {
+    padding: 1%;
     margin-right: 5%;
     background-color: #524e4e;
 }
@@ -70,10 +71,6 @@ p {
     font-size: 18px;
 }
 
-main {
-    margin-left: 10%;
-}
-
 .block-container {
     justify-content: space-around;
     flex-basis: 85%;
@@ -96,6 +93,7 @@ h3 {
 .block-container {
     justify-content: space-around;
     flex-basis: 85%;
+    margin-top: 5%;
 }
 
 .work-block {
@@ -186,18 +184,31 @@ h3 {
     flex-basis: 100%; 
     justify-content: space-around;
     align-items: center;
-} 
+}
+
+main.container {
+    margin-left: 10%;
+}
 
 /* For below, I originally used the :after element to create a border beside the content instead, but this shifted my page too much. I thought it was a cool effect */
 .title {
     flex-basis: 15%; /* take up 15% of screen */
-    padding-right: 5px; /* pad side for space between border */
-    border-right: 2px solid black; /* add line to divide title and content */
+    margin-top: 5%;
+    padding-right: 15px; /* pad side for space between border */
+    border-right: 4px solid #5f5656; /* add line to divide title and content */
     font-size: 35px;
     font-weight: bolder;
     text-align: right; /* push text to the right of container */
 }
 
+
+.content-wrapper {
+    flex-direction: column;
+    flex-basis: 75%;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+}
 
 
 /*media rules*/
